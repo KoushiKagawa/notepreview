@@ -14,9 +14,8 @@
       <div class="container">
         <div class="main-wrapper">
           <h1>noteプレビュー</h1>
-          <p>noteのタイムラインのプレビューが確認できます。<br>（2019年5月20日時点の情報です）</p>
         </div>
-        
+
         <!-- input field -->
         <div class ="inputArea">
           <div class="inputAreaTitle">
@@ -35,144 +34,108 @@
           </div>
         </div>
 
-        <!--
-        <div>
-          確認する
-          <a href="#timeline">noteタイムラインイメージ(PC表示)</a>
-        </div>
-        -->
-
-<!-- timeline -->
-<!--
-        <div class="noteTimeline">
-          <div class="noteTimelineH2">
-            <h2 id="timeline">noteタイムラインイメージ(PC)</h2>
-          </div>
-          <div class="image"><img src="./images/noteimage.png" class="noteTimelineImage"></div>
-          <h3 class="title">{{ title }}</h3>
-          <div class="description">{{ description }}</div>
-
-          <div class="card">
-            <div class="like">
-                <div class="heartSymbol"><i class="far fa-heart"></i></div>
-                <div class="heartCount">123</div>
-            </div>
-          </div>
-          <div class="userInfo">
-            <div class="userInfoAvatar">
-              <div class="userInfoImage"><img src="./images/profile.jpeg"></div>
-              <div class="userInfoName">noteユーザー</div>
-              <div class="userInfoTime">３時間前</div>
-            </div>
-            <div class="userInfoLike"><i class="far fa-heart"></i></div>
-          </div>
-        </div>  
--->
-<!-- Search -->
-<!--
-        <div class="noteSearch">
-          <div class="noteSearchH2">
-            <h2 id="search">note検索結果イメージ(PC)</h2>
-          </div>
-          <div class="image"><img src="./images/noteimage.png" class="noteSearchImage"></div>
-          <h3 class="noteSearchtitle">{{ title }}</h3>
-          <div class="noteSearchDescription">{{ description }}</div>
-          <div class="card">
-            <div class="like">
-                <div class="heartSymbol"><i class="far fa-heart"></i></div>
-                <div class="heartCount">123</div>
-            </div>
-          </div>     
-          <div class="userInfo">
-            <div class="userInfoAvatar">
-              <div class="userInfoImage"><img src="./images/profile.jpeg"></div>
-              <div class="userInfoName">noteユーザー</div>
-              <div class="userInfoTime">３時間前</div>
-            </div>
-            <div class="userInfoLike"><i class="far fa-heart"></i></div>
-          </div>
-        </div>
--->
-<!-- 結果画面 -->
+        <!-- 結果画面 -->
         <div class="tabs">
-            <input id="all" type="radio" name="tab_item" checked>
-            <label class="tab_item" for="all">タイムライン</label>
-            <input id="programming" type="radio" name="tab_item">
-            <label class="tab_item" for="programming">検索結果</label>
+          <input id="all" type="radio" name="tab_item" checked>
+          <label class="tab_item" for="all">タイムライン</label>
+          <input id="programming" type="radio" name="tab_item">
+          <label class="tab_item" for="programming">検索結果</label>
 
-<!-- timeline -->
-            <div class="tab_content" id="all_content">
-              <div class="tab_content_description">
-                
-                  <div class="noteTimeline">
-                      <div class="noteTimelineH2">
-                        <h2 id="timeline">noteタイムラインイメージ(PC)</h2>
-                      </div>
-                      <div class="image"><img src="./images/noteimage.png" class="noteTimelineImage"></div>
-                      <!-- 150文字で... 30文字で折り返し -->
-                      <h3 class="title">{{ title }}</h3>
-                      <div class="description">{{ description }}</div>
-            
-                      <div class="card">
-                        <div class="like">
-                            <div class="heartSymbol"><i class="far fa-heart"></i></div>
-                            <div class="heartCount">123</div>
-                        </div>
-                      </div>
-                      <div class="userInfo">
-                        <div class="userInfoAvatar">
-                          <div class="userInfoImage"><img src="./images/profile.jpeg"></div>
-                          <div class="userInfoName">noteユーザー</div>
-                          <div class="userInfoTime">３時間前</div>
-                        </div>
-                        <div class="userInfoLike"><i class="far fa-heart"></i></div>
-                      </div>
-                    </div>  
-
-              </div>
-            </div>
-
-<!-- Search -->
-            <div class="tab_content" id="programming_content">
-              <div class="tab_content_description">
-                
-                  <div class="noteSearch">
-                      <div class="noteSearchH2">
-                        <h2 id="search">note検索結果イメージ(PC)</h2>
-                      </div>
-                      <div class="image"><img src="./images/noteimage.png" class="noteSearchImage"></div>
-                      <h3 class="noteSearchtitle">{{ title }}</h3>
-                      <div class="noteSearchDescription">{{ description }}</div>
-                      <div class="card">
-                        <div class="like">
-                            <div class="heartSymbol"><i class="far fa-heart"></i></div>
-                            <div class="heartCount">123</div>
-                        </div>
-                      </div>
-                    
-                      <div class="userInfo">
-                        <div class="userInfoAvatar">
-                          <div class="userInfoImage"><img src="./images/profile.jpeg"></div>
-                          <div class="userInfoName">noteユーザー</div>
-                          <div class="userInfoTime">３時間前</div>
-                        </div>
-                        <div class="userInfoLike"><i class="far fa-heart"></i></div>
-                      </div>
-            
+          <!-- timeline -->
+          <div class="tab_content" id="all_content">
+            <div class="tab_content_description">
+              
+                <div class="noteTimeline">
+                    <div class="noteTimelineH2">
+                      <h2 id="timeline">noteタイムラインイメージ(PC)</h2>
                     </div>
+                    <div class="image"><img src="./images/noteimage.png" class="noteTimelineImage"></div>
 
-              </div>
+                    <!-- 文字数により分岐 -->
+                    <h3 class="title" v-if="charaCount <= 155">{{ title }}</h3>
+                    <h3 class="title" v-else>{{ title | readMore(155, '...')}}</h3>
+
+                    <!-- 文字数により分岐 -->
+                    <div class="description" v-if="charaCount <= 183">{{ description }}</div>
+                    <div class="description" v-else>{{ description | readMore(188, '...')}}</div>
+          
+                    <div class="card">
+                      <div class="like">
+                        <div class="heartSymbol"><i class="far fa-heart"></i></div>
+                        <div class="heartCount">123</div>
+                      </div>
+                      <div class="comment">
+                        <div class="commentSymbol"><i class="far fa-comment-alt"></i></div>
+                        <div class="commentCount">45</div>
+                      </div>
+                    </div>
+                    <div class="userInfo">
+                      <div class="userInfoAvatar">
+                        <div class="userInfoImage"><img src="./images/profile.jpeg"></div>
+                        <div class="userInfoName">noteユーザー</div>
+                        <div class="userInfoTime">３時間前</div>
+                      </div>
+                      <div class="userInfoLike"><i class="far fa-heart"></i></div>
+                    </div>
+                  </div>  
+
             </div>
           </div>
-<!-- //tab -->
 
+          <!-- Search -->
+          <div class="tab_content" id="programming_content">
+            <div class="tab_content_description">
+              
+                <div class="noteSearch">
+                    <div class="noteSearchH2">
+                      <h2 id="search">note検索結果イメージ(PC)</h2>
+                    </div>
+                    <div class="image"><img src="./images/noteimage.png" class="noteSearchImage"></div>
+                    <!-- 文字数により分岐 -->
+                    <h3 class="noteSearchtitle" v-if="charaCount <= 52">{{ title }}</h3>
+                    <h3 class="noteSearchtitle" v-else>{{ title | readMore(52, '...')}}</h3>
 
-        
-        
+                    <!-- 文字数により分岐 -->
+                    <div class="noteSearchDescription" v-if="charaCount <= 74">{{ description }}</div>
+                    <div class="noteSearchDescription" v-else>{{ description | readMore(74, '...')}}</div>
+                    <div class="card">
+                      <div class="like">
+                        <div class="heartSymbol"><i class="far fa-heart"></i></div>
+                        <div class="heartCount">123</div>
+                      </div>
+                      <div class="comment">
+                        <div class="commentSymbol"><i class="far fa-comment-alt"></i></div>
+                        <div class="commentCount">45</div>
+                      </div>
+                    </div>
+                  
+                    <div class="userInfo">
+                      <div class="userInfoAvatar">
+                        <div class="userInfoImage"><img src="./images/profile.jpeg"></div>
+                        <div class="userInfoName">noteユーザー</div>
+                        <div class="userInfoTime">３時間前</div>
+                      </div>
+                      <div class="userInfoLike"><i class="far fa-heart"></i></div>
+                    </div>
+          
+                  </div>
 
+            </div>
+          </div>
+        </div>
 
-      </div>      
+      </div>    
+
+      <div class="notePreviewAbout">
+        <h2>このサイトについて</h2>
+        <div>
+            <p>noteのタイムラインのプレビューが確認できます。<br>（2019年5月20日時点の情報です）</p>
+          <a href="https://twitter.com/koushikagawa" target="_blank">@koushikagawa</a>
+        </div>
+      </div>
+
     </div>
+
   
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>

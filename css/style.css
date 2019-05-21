@@ -220,9 +220,31 @@ img.noteSearchImage {
     margin-right: 16px;
     font-size: 14px;
     line-height: 1.5;
+    position: relative;
+    padding-left: 20px;
+    margin-right: 16px;
+    float: left;
+    margin-right: 10px;
+    margin-right: 16px;
 }
 
 .like .heartSymbol {
+    position: absolute;
+    left: 0;
+}
+
+.card .comment {
+    color: #787c7b;
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 20px;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+
+.comment .commentSymbol {
     position: absolute;
     left: 0;
 }
@@ -355,3 +377,11 @@ img.noteSearchImage {
     background-color: #41c9b3;
     color: #fff;
   }
+
+/****
+About
+****/
+.notePreviewAbout {
+    width: 700px;
+    margin: auto;
+}
