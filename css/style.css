@@ -1,0 +1,357 @@
+/***
+common
+***/
+
+.main-wrapper {
+    width: 100%;
+}
+
+.main-wrapper h1 {
+    text-align: center;
+}
+
+.title {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", Arial, "メイリオ", Meiryo, sans-serif;
+    -webkit-font-feature-settings: 'palt' 1;
+    font-feature-settings: 'palt' 1;
+    letter-spacing: 0.04em;
+    line-break: strict;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.description {
+    line-break: strict;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-break: strict;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.container {
+    /*width: 610px;*/
+    width: 700px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.inputArea {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.inputArea label {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1;
+    /* margin-bottom: 11px; */
+}
+
+input[type="text"] {
+    display: inline-block;
+    min-height: 40px;
+    padding: 4px 8px;
+    line-height: 1.5;
+    color: #222;
+    vertical-align: top;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+.inputArea textarea {
+    padding: 4px 8px;
+    line-height: 1.5;
+    color: #222;
+    vertical-align: top;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 14px;
+    width: 100%;
+    height: 100px;
+}
+
+span.charaCount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 10px;
+    color: #EA3F60;
+}
+
+.inputAreaCount {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+p.inputAreaCountTitle {
+    display: inline;
+    vertical-align: middle;
+    padding-right: 30px;
+}
+
+p.inputAreaCountDescription {
+    display: inline;
+    vertical-align: middle;
+    padding-left: 30px;
+    border-left: 2px solid #CCC;
+}
+
+/**
+TImeLine
+**/
+
+.noteTimelineH2,
+.noteSearchH2 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.noteTimeline {
+    width: 610px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+img.noteTimelineImage {
+    object-fit: cover;
+    width: 610px;
+    height: 319px;
+    border-radius: 4px;
+}
+
+/***
+検索結果ページ
+***/
+.noteSearch {
+    width: 100%;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+h3.noteSearchtitle {
+    margin-top: -4px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: .04em;
+    word-break: break-all;
+    -webkit-font-feature-settings: "palt" 1;
+    font-feature-settings: "palt" 1;
+    font-size: 22px;
+}
+
+.noteSearchDescription {
+    margin-bottom: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    word-break: break-all;
+    font-size: 14px;
+}
+
+img.noteSearchImage {
+    width: 104px;
+    height: 104px;
+    object-fit: cover;
+    position: relative;
+    float: right;
+    width: 104px;
+    height: 104px;
+    border-radius: 4px;
+    margin: 0 0 0 16px;
+}
+
+
+/***
+ユーザ情報
+***/
+.card .like {
+    color: #EA3F60;
+    position: relative;
+    padding-left: 20px;
+    margin-right: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.like .heartSymbol {
+    position: absolute;
+    left: 0;
+}
+
+.userInfo {
+    border-top: none;
+    padding: 16px 0 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+    pointer-events: none;
+    width: 100%;
+}
+
+.userInfoAvatar {
+    pointer-events: auto;
+    position: relative;
+    padding-left: 48px;
+    width: calc(100% - 48px);
+}
+
+.userInfoImage {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.userInfoImage img {
+    width: 36px;
+    border-radius: 50%;
+}
+
+.userInfoName {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: -2px;
+    font-weight: normal;
+    word-break: break-all;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #787c7b;
+}
+
+.userInfoTime {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-weight: normal;
+    word-break: break-all;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #787c7b;
+}
+
+.userInfoLike {
+    vertical-align: top;
+    display: inline-block;
+    font-size: 20px;
+    width: 24px;
+    height: 24px;
+    line-height: 1;
+    position: relative;
+    color: #787C7B;
+}
+
+/**
+タブ切り替え
+**/
+/*タブ切り替え全体のスタイル*/
+.tabs {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+    width: 100%;
+    /* margin: 0 auto; */
+}
+  
+  /*タブのスタイル*/
+  .tab_item {
+    width: calc(100%/2);
+    /* height: 50px; */
+    border-bottom: 1px solid #41c9b3;
+    background-color: #e6e6e6;
+    line-height: 50px;
+    font-size: 16px;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    /* transition: all 0.2s ease; */
+}
+
+  .tab_item:hover {
+    opacity: 0.75;
+  }
+  
+  /*ラジオボタンを全て消す*/
+  input[name="tab_item"] {
+    display: none;
+  }
+  
+  /*タブ切り替えの中身のスタイル*/
+  .tab_content {
+    display: none;
+    /*padding: 40px 40px 0;*/
+    clear: both;
+    overflow: hidden;
+  }
+  
+  
+  /*選択されているタブのコンテンツのみを表示*/
+  #all:checked ~ #all_content,
+  #programming:checked ~ #programming_content,
+  #design:checked ~ #design_content {
+    display: block;
+  }
+  
+  /*選択されているタブのスタイルを変える*/
+  .tabs input:checked + .tab_item {
+    background-color: #41c9b3;
+    color: #fff;
+  }
